@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="/static/css/style.css"/>
+    <link rel="shortcut icon" href="/src/main/resources/static/images/SGlogo.ico"/>
+    <title>SneakerGeeks</title>
+</head>
+<body class="body">
+<header>
+    <div>
+        <h1 class="title">SneakerGeeks</h1>
+    </div>
+
+    <div>
+        <nav class="navbar">
+            <h2 class="nav-words">Clean Kicks Review </h2>
+        </nav>
+    </div>
+</header>
+<main class="row">
+    <th:block th:each="brandCategory: ${brandCategories.getAllBrandCategories()}">
+        <div class="column-left">
+            <a th:href="@{'/brands/' + ${brandCategory.id}}">
+                <img th:src="${brandCategory.imageUrl}" width="500" alt="Shoes"></a>
+        </div>
+    </th:block>
+    <br>
+    <div class="hashtag_container">
+       <a href="hashtags"><h1>Hashtags</h1></a>
+    </div>
+</main>
+<footer class="footer">
+    <small>&#169; 2021 SneakerGeeks</small>
+</footer>
+</body>
+</html>

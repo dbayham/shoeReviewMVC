@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="/images/">
+    <link rel="shortcut icon" href="images/SGlogo.ico">
+    <title>SHOEREVIEW_SneakerGeeks</title>
+</head>
+<body class="body">
+
+
+<header>
+    <div>
+        <a th:href="@{'/'}" class="title"><h1>SneakerGeeks</h1></a>
+    </div>
+
+</header>
+
+<main>
+
+    <div class="sgReview">
+        <h2 th:text="${shoeReview.name}" class="reviewTitle">Shoe Review Name</h2>
+        <img th:src="${shoeReview.imageUrl}" width="600" th:alt="${shoeReview.name} + ' image'">
+        <p th:text="${shoeReview.review}">Shoe Review</p>
+        <a class="reviewPic"
+        ><img
+                src="images/nikeshoes/air-max-97-mens-shoe-SD3ZmW.jpeg"
+                width="600"
+                alt=""
+        /></a>
+        <p class="paragraphAir97"></p>
+    </div>
+
+    <div>
+        <a class="comments">
+            <h4>Comments</h4>
+        </a>
+        <ul>
+            <li th:each="comment: ${shoeReview.getComments()}">
+                <p th:text="'Comment: ' + ${comment.getRemark()}"></p>
+                <p th:text="'Author: ' + ${comment.getTrollName()}"></p>
+            </li>
+        </ul>
+
+        <form th:action="'/comments/add/' + ${shoeReview.getName()}" method="post">
+            <label for="comment">Add Comment:</label>
+            <input name="comment" type="text" id="comment">
+            <label for="name">Name:</label>
+            <input name="name" type="text" id="name">
+            <button type="submit">Add Comment</button>
+        </form>
+
+    </div>
+
+    <div class="sidebar">
+        <a class="hashtag">
+            <h4>Hashtags</h4>
+        </a>
+        <ul>
+            <li th:each="hashtag: ${shoeReview.getHashtags()}"><a th:href="@{'/hashtags/' + ${hashtag.getName()}}"
+                                                                  th:text="${hashtag.getName()}" class="sidebarTagLife">#hashtags</a>
+            </li>
+        </ul>
+        <form th:action="'/hashtags/add/' + ${shoeReview.getName()}" method="post">
+            <input name="hashtag" type="text">
+            <button type="submit">Add Hashtag</button>
+        </form>
+
+    </div>
+
+
+</main>
+
+<footer class="footer">
+    <small>&#169;SneakerGeeks 2021</small>
+</footer>
+</body>
+</html>

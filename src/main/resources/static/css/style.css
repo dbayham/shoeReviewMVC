@@ -1,0 +1,262 @@
+* {
+  box-sizing: border-box;
+}
+.body {
+  margin: 0%;
+  padding: 0;
+  height: 1000%;
+  background-color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar {
+  display: grid;
+  background-color: black;
+}
+.nav-words {
+  display: grid;
+  place-items: center;
+  background-color:white;
+}
+
+
+.navadidas{
+  display: flex;
+  padding: 5px;
+  place-content: center;
+  background-color: black;
+}
+
+
+.nav{
+  display:flex;
+  justify-content: center;
+  padding-top: 10px;
+  background-color:black;
+}
+
+.navAdidasLogo{  
+ padding: 15px;
+ align-items:baseline;
+}
+.navSG{
+  justify-content: center;
+  align-items:baseline;
+  font-size: 38px;
+  text-decoration: none;
+  color: purple
+}
+/* .navSG{
+  margin-right: 8px;
+  font-size: 30px;
+  text-decoration: none;
+  color: white;
+} */
+
+.navNikelogo{
+  align-items: baseline;
+  padding-top: 5px;
+  padding-left: 10px;
+  color: white;
+  
+}
+
+.row {
+  display: flex;
+  flex: wrap;
+  justify-content: space-between;
+  margin-left: 70px;
+  position: relative;
+  top: 150px;
+}
+
+.column {
+  flex: 1 1 150px;
+  flex: 0 1 150px;
+  margin: 5px;
+}
+
+.column-middle {
+  display: flex;
+  flex-direction: column;
+}
+
+.tag-Lifestyle {
+  display: flex;
+  justify-content: center;
+}
+
+.tag-Budget {
+  display: flex;
+  justify-content: center;
+}
+
+.tag-Running {
+  display: flex;
+  justify-content: center;
+}
+
+.columnAdidas {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.columnNike {
+  display: flex;
+  justify-content: center;
+}
+
+.sidebar{
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 500%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+.sidebar a.active{
+  background-color:purple;
+  color: white;
+}
+
+.hashtag{
+  text-align: center;
+  
+}
+.Tag-List{
+  margin-right: 10px;
+
+}
+.Reviews{
+  text-align: center;
+  text-decoration: solid;
+  color: black;
+
+}
+
+.nikeshoes{
+  margin-top: 10px;
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 300px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nikeLifeWords{
+  display: flex;
+  justify-content: space-around;
+}
+
+.nikeRunWords{
+  display: flex;
+  justify-content: space-around;
+  height: 30%;
+}
+
+.nikebottom{
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.nikeBudgetWords{
+  display: flex;
+  justify-content: space-around;
+  height: 30%;
+}
+
+
+.nikeEndorsementsWords{
+  display: flex;
+  justify-content: space-around;
+  height: 30%;
+}
+
+.adidasTop{
+  margin-top: 10px;
+  margin-left: 220px;
+  padding: 1px 16px;
+  height: 300px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.adidaslifestyleWords{
+  display: flex;
+  justify-content: space-around;
+}
+
+.adidasRunningWords{
+  display: flex;
+  justify-content: space-around;
+  height: 30%;
+}
+
+.adidasBottom{
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.adidasBudgetWords{
+  display: flex;
+  justify-content: space-around;
+  height: 30%;
+}
+
+
+.adidasEdorsementsWords{
+  display: flex;
+  justify-content: space-around;
+  height: 30%;
+}
+
+.sgReview{
+  display: flex;
+  justify-content: center ;
+  flex-direction: column ;
+  align-items: center;
+}
+
+.paragraphAir97{
+  justify-content: center;
+  align-items: center;
+  margin-left: 150px;
+}
+
+.sidebarTagLife{
+ 
+
+}
+
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: .5rem;
+  position: absolute; bottom: 0; left: 0; right: 0;
+}
